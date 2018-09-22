@@ -3,21 +3,44 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "draft-js": "^0.10.5",
+    "history": "^4.7.2",
+    "mobx": "^5.1.2",
+    "mobx-react": "^5.2.8",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts-ts": "2.17.0"
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts-ts": "2.17.0",
+    "rsuite": "^3.2.11"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "start": "react-app-rewired start --scripts-version react-scripts-ts",
+    "build": "react-app-rewired build --scripts-version react-scripts-ts",
+    "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts",
+    "release": "standard-version"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "devDependencies": {
     "@types/jest": "^23.3.2",
     "@types/node": "^10.10.3",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
-    "typescript": "^3.0.3"
+    "autoprefixer": "^9.1.5",
+    "babel-preset-rsuite": "^0.0.6",
+    "css-loader": "^1.0.0",
+    "husky": "^1.0.0-rc.15",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "react-app-rewired": "^1.6.2",
+    "standard-version": "^4.4.0",
+    "style-loader": "^0.23.0",
+    "typescript": "^3.0.3",
+    "url": "^0.11.0"
   }
 }
