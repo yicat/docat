@@ -2,17 +2,14 @@ import * as React from 'react';
 
 import * as cls from './Side.module.less';
 
-interface IProps {
-  width: number;
-  gap: number;
-}
+interface IProps { width: number; }
 
 export default class extends React.Component<IProps> {
   render () {
-    const { width, gap } = this.props;
+    const { width } = this.props;
 
     return (
-      <div className={cls.side} style={{ width, marginRight: gap }}>
+      <div className={cls.side} style={{ width }}>
         <div>Doc</div>
       </div>
     );

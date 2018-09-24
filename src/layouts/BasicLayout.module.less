@@ -11,6 +11,8 @@
   align-items: center;
   width: 100%;
   height: 48px;
+  flex-grow: 0;
+  flex-shrink: 0;
   background: #24292e;
 }
 
@@ -19,17 +21,20 @@
   color: white;
 }
 
-.viewWrapper {
+.mainSection {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
   width: 100%;
   height: 100%;
   background: #fafafa;
 }
 
-.view {
+.sideSection {
   display: flex;
+}
+
+.viewSection {
+  display: flex;
+  flex-grow: 1;
+  overflow: auto;
   height: 100%;
 }
