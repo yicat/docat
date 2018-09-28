@@ -1,4 +1,4 @@
 import BasicLayout from './BasicLayout';
-import BoardLayout from './BoardLayout';
+import ViewLayout from './ViewLayout';
 
-export { BasicLayout, BoardLayout };
+export { BasicLayout, ViewLayout };

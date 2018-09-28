@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Editor, EditorState, DraftHandleValue } from 'draft-js';
 
-import { BoardLayout } from 'src/layouts';
+import { ViewLayout } from 'src/layouts';
+import { Board } from 'src/suites';
 import { keyBindingFn, keyCommand } from './keyBinding';
-import * as cls from './Doc.module.less';
+import Toolbar from './Toolbar';
 
 interface IProps { }
 interface IState {
@@ -40,8 +41,9 @@ export default class Doc extends React.Component<IProps, IState> {
 
   render () {
     return (
-      <BoardLayout onClick={this.handlePageFocus}>
-        <div className={cls.docWrapper}>
+      <ViewLayout onClick={this.handlePageFocus}>
+        <Toolbar />
+        <Board style={{ minHeight: 400, paddingTop: 60 }}>
           <Editor
             editorState={this.state.editorState}
             onChange={this.handleChange}
@@ -49,8 +51,8 @@ export default class Doc extends React.Component<IProps, IState> {
             keyBindingFn={keyBindingFn}
             ref={this.setDomEditorRef}
           />
-        </div>
-      </BoardLayout>
+        </Board>
+      </ViewLayout>
     );
   }
 }
